@@ -1,4 +1,4 @@
-package com.leefo.alphaville;
+package com.alphaville.coffeeapplication;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.leefo.alphaville", appContext.getPackageName());
+        assertEquals("com.alphaville.coffeeapplication", appContext.getPackageName());
     }
 }

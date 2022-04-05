@@ -1,4 +1,4 @@
-package com.leefo.alphaville;
+package com.alphaville.coffeeapplication;
 
 import org.junit.Test;
 
