@@ -15,9 +15,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //add the navbar and connect the listener navlistener
         NavigationBarView barView = findViewById(R.id.bottom_navigation);
         barView.setOnItemSelectedListener(navlistener);
     }
+
+    //create the navbar with appropriate buttons
     private NavigationBarView.OnItemSelectedListener navlistener =
             new NavigationBarView.OnItemSelectedListener() {
                 @Override

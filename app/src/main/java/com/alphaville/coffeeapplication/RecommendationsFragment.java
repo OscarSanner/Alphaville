@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+//Placeholder class
+
 public class RecommendationsFragment extends Fragment {
     @Nullable
     @Override
