@@ -1,4 +1,4 @@
-package View;
+package com.alphaville.coffeeapplication.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;

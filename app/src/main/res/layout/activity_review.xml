@@ -7,7 +7,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="View.ReviewDataFragment"
+        android:name="com.alphaville.coffeeapplication.View.ReviewDataFragment"
         android:layout_width="match_parent"
         android:layout_height="257dp"
         app:layout_constraintEnd_toEndOf="parent"

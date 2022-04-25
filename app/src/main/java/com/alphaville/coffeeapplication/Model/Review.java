@@ -1,4 +1,4 @@
-package Model;
+package com.alphaville.coffeeapplication.Model;
 
 public class Review {
 
