@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,18 +18,20 @@ import com.alphaville.coffeeapplication.databinding.ReviewDataFragmentBinding;
 
 public class ReviewDataFragment extends Fragment {
 
-    ReviewDataFragmentBinding binding;
+    //ReviewDataFragmentBinding binding;
+    private TextView inputBox;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.review_data_fragment, container, false);
+        View view = inflater.inflate(R.layout.review_data_fragment, container, false);
 
-    return binding.getRoot();
+        inputBox = view.findViewById(R.id.inputBox);
+
+    return view;
     }
 
-    public void initInputBox(final ReviewDataFragmentBinding binding) {
+    public void initInputBox() {
 
-        EditText inputBox = binding.inputBox;
         inputBox.setHint("Enter your review");
     }
 }
