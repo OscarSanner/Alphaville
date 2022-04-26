@@ -15,10 +15,10 @@ public class CoffeeProductAdapter extends RecyclerView.Adapter<CoffeeProductAdap
 
     // Instansvariabler + konstruktor
     // Byt ut mot kaffekort senare
-    private List<Integer> coffeeProducts;
+    private List<Object> coffeeProducts;
 
     // Pass in the contact array into the constructor
-    public CoffeeProductAdapter(List<Integer> coffeeProducts) {
+    public CoffeeProductAdapter(List<Object> coffeeProducts) {
         this.coffeeProducts = coffeeProducts;
     }
 
@@ -29,7 +29,7 @@ public class CoffeeProductAdapter extends RecyclerView.Adapter<CoffeeProductAdap
         LayoutInflater inflater = LayoutInflater.from(context);
 
         // Inflate the custom layout -- byt senare ut NAMEOFCARD mot kortet för en product (XML)
-        View contactView = inflater.inflate(R.layout.PlaceholderCard, parent, false);
+        View contactView = inflater.inflate(R.layout.placeholder_card, parent, false);
 
         // Return a new holder instance
         ViewHolder viewHolder = new ViewHolder(contactView);
@@ -39,14 +39,14 @@ public class CoffeeProductAdapter extends RecyclerView.Adapter<CoffeeProductAdap
     @Override
     public void onBindViewHolder(@NonNull CoffeeProductAdapter.ViewHolder holder, int position) {
         // Get the data model based on position
-        Integer product = coffeeProducts.get(position);
+        Object product = coffeeProducts.get(position);
 
         // Set item views based on your views and data model
 
         // Byt ut mot vad som faktiskt finns på ett kort senare
 
         TextView textView = holder.testTextView;
-        textView.setText(product);
+        textView.setText(product.toString());
 
     }
 
