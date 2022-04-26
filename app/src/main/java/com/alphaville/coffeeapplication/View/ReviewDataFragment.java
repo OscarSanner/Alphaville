@@ -25,4 +25,10 @@ public class ReviewDataFragment extends Fragment {
 
     return binding.getRoot();
     }
+
+    public void initInputBox(final ReviewDataFragmentBinding binding) {
+
+        EditText inputBox = binding.inputBox;
+        inputBox.setHint("Enter your review");
+    }
 }

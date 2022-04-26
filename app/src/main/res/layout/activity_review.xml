@@ -10,7 +10,9 @@
         android:name="com.alphaville.coffeeapplication.View.ReviewDataFragment"
         android:layout_width="match_parent"
         android:layout_height="257dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
