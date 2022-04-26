@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import com.alphaville.coffeeapplication.R;
 
+/**
+ * ReviewActivity is the activity for reviewing a coffee product
+ */
 public class ReviewActivity extends AppCompatActivity {
 
     @Override
