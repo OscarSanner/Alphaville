@@ -15,12 +15,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="190dp">
+                android:layout_height="226dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -33,8 +33,10 @@
                         android:background="#A5A3A3"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
 
                     <ImageView
                         android:id="@+id/coffeepicture"
@@ -58,44 +60,113 @@
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="4dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="24dp"
                         android:src="@android:drawable/presence_away"
-                        app:layout_constraintStart_toEndOf="@+id/coffeepicture"
-                        app:layout_constraintTop_toBottomOf="@+id/coffeenameText" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/coffeepicture" />
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginTop="4dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
                         android:src="@android:drawable/presence_away"
                         app:layout_constraintStart_toEndOf="@+id/imageView6"
-                        app:layout_constraintTop_toBottomOf="@+id/coffeenameText" />
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView8"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView11"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
                     <TextView
                         android:id="@+id/matchrateText"
                         android:layout_width="68dp"
                         android:layout_height="16dp"
-                        android:layout_marginStart="6dp"
                         android:layout_marginTop="4dp"
                         android:text="82% Match"
                         android:textSize="12sp"
-                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintStart_toStartOf="@+id/coffeenameText"
                         app:layout_constraintTop_toBottomOf="@+id/coffeenameText" />
 
                     <ImageView
                         android:id="@+id/imageView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginTop="4dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
                         android:src="@android:drawable/presence_away"
                         app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toBottomOf="@+id/coffeenameText" />
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
                     <TextView
                         android:id="@+id/coffeenameText"
@@ -130,6 +201,17 @@
                         android:text="Klassiskt rostad på vårat hederliga recept."
                         app:layout_constraintStart_toEndOf="@+id/coffeepicture"
                         app:layout_constraintTop_toBottomOf="@+id/matchrateText" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="31dp"
+                        android:layout_height="8dp"
+                        android:text="Sweetness"
+                        android:textSize="6dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                        app:layout_constraintStart_toStartOf="@+id/imageView5" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
 
@@ -148,78 +230,136 @@
                         android:background="#C3E8B8"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/hardcoded5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="200dp"
+                        android:text="•Process:"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/hardcoded1" />
+
+                    <TextView
+                        android:id="@+id/hardcoded1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:text="•Hight:"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/processText"
+                        android:id="@+id/hardcoded2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="244dp"
-                        android:text="Process"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/hightText" />
+                        android:layout_marginTop="24dp"
+                        android:text="•Flavour:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded1"
+                        app:layout_constraintTop_toBottomOf="@+id/hardcoded1" />
+
+                    <TextView
+                        android:id="@+id/hardcoded3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="•Country:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded2"
+                        app:layout_constraintTop_toBottomOf="@+id/hardcoded2" />
+
+                    <TextView
+                        android:id="@+id/hardcoded4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="•Region:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded3"
+                        app:layout_constraintTop_toBottomOf="@+id/hardcoded3" />
+
+                    <TextView
+                        android:id="@+id/hardcoded6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="•Rostery:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded5"
+                        app:layout_constraintTop_toTopOf="@+id/hardcoded2" />
+
+                    <TextView
+                        android:id="@+id/hardcoded7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="•Brand:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded6"
+                        app:layout_constraintTop_toTopOf="@+id/hardcoded3" />
 
                     <TextView
                         android:id="@+id/hightText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="52dp"
-                        android:layout_marginTop="24dp"
-                        android:text="Hight"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded1"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded1" />
+
+                    <TextView
+                        android:id="@+id/processText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded5"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded5" />
 
                     <TextView
                         android:id="@+id/flavourText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:text="Flavour"
-                        app:layout_constraintStart_toStartOf="@+id/hightText"
-                        app:layout_constraintTop_toBottomOf="@+id/hightText" />
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded2"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded2" />
 
                     <TextView
                         android:id="@+id/countryText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:text="Country"
-                        app:layout_constraintStart_toStartOf="@+id/flavourText"
-                        app:layout_constraintTop_toBottomOf="@+id/flavourText" />
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded3"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded3" />
 
                     <TextView
                         android:id="@+id/regionText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:text="Region"
-                        app:layout_constraintStart_toStartOf="@+id/countryText"
-                        app:layout_constraintTop_toBottomOf="@+id/countryText" />
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded4"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded4" />
 
                     <TextView
                         android:id="@+id/rosteryText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Rostery"
-                        app:layout_constraintStart_toStartOf="@+id/processText"
-                        app:layout_constraintTop_toTopOf="@+id/flavourText" />
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded6"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded6" />
 
                     <TextView
                         android:id="@+id/brandText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Brand"
-                        app:layout_constraintStart_toStartOf="@+id/rosteryText"
-                        app:layout_constraintTop_toTopOf="@+id/countryText" />
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded7"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded7" />
 
-                    <TextView
-                        android:id="@+id/tasteText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Taste"
-                        app:layout_constraintStart_toStartOf="@+id/brandText"
-                        app:layout_constraintTop_toTopOf="@+id/regionText" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
 
@@ -270,6 +410,16 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="128dp"
+                        android:text="Openstreetmap is displayed here"
+                        app:layout_constraintStart_toStartOf="@+id/mapView"
+                        app:layout_constraintTop_toTopOf="@+id/mapView" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
