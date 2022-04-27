@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * An object of the CoffeeProduct type represents a type of coffee bean and describes all its properties, along with whether the user likes it or not.
  *
- * Mostly immutable except for its isLiked attribute, which can be set.
+ * Completely immutable to prevent logical errors.
  */
 public class CoffeeProduct
 {
@@ -33,9 +33,9 @@ public class CoffeeProduct
     private final String description;
 
     /** Whether the user likes the coffeeproduct. */
-    private boolean isLiked;
+    private final boolean isLiked;
 
-    public CoffeeProduct(String name, String roastery, String country, int elevation, Process process, List<Taste> tastes, String description){
+    public CoffeeProduct(String name, String roastery, String country, int elevation, Process process, List<Taste> tastes, String description, boolean isLiked){
         this.name = name;
         this.roastery = roastery;
         this. country = country;
@@ -45,7 +45,7 @@ public class CoffeeProduct
         this.tastes = new ArrayList<>(tastes);
 
         this.description = description;
-        this.isLiked = false;
+        this.isLiked = isLiked;
     }
 
     // Getters ------------
@@ -65,13 +65,6 @@ public class CoffeeProduct
     public String getDescription() { return description; }
 
     public boolean isLiked() { return isLiked; }
-
-
-    // Setters ------------
-
-    public void setLiked(boolean isLiked){
-        this.isLiked = isLiked;
-    }
 
 
 }
