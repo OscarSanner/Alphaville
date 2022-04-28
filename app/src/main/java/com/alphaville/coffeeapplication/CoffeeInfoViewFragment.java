@@ -20,6 +20,7 @@ import org.jetbrains.annotations.NotNull;
 public class CoffeeInfoViewFragment extends Fragment {
 
     private CoffeeInfoViewFragmentBinding binding;
+    private CoffeeInfoViewModel model;
 
     @Override
     public View onCreateView (LayoutInflater inflater,
@@ -29,15 +30,16 @@ public class CoffeeInfoViewFragment extends Fragment {
         View view = binding.getRoot();
         return view;
         /*
-        setCoffeeAttributes();
-        setCoffeeInformation();
-        setCoffeePicture();
+        setCoffeeAttributes(hight, flavour, country, region, process, rostery, brand);
+        setCoffeeInformation(name, info, description);
+        setCoffeePicture(image);
+        setClocks(firstClockText, secondClockText, thirdClockText);
 
         //listener for the review button
         binding.reviewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //viewmodel.openReviewPage();
+                model.openReviewPage(); //What class should do this? Probably not the model.
             }
         });
 
@@ -45,7 +47,7 @@ public class CoffeeInfoViewFragment extends Fragment {
         binding.likeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //viewmodel.changeLikeStatus(binding.likeBtn.isChecked());
+                model.changeLikeStatus(binding.likeBtn.isChecked());
             }
         });
         */
@@ -74,4 +76,10 @@ public class CoffeeInfoViewFragment extends Fragment {
         binding.coffeepicture.setImageIcon(image);
     }
 
+    private void setClocks(String first, String second, String third){
+        binding.clock1Text.setText(first);
+        binding.clock2Text.setText(second);
+        binding.clock2Text.setText(third);
+
+    }
 }
