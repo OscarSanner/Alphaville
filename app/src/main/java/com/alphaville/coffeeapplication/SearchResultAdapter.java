@@ -5,22 +5,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alphaville.coffeeapplication.model.CoffeeProduct;
 
 import java.util.List;
 
+/**
+ * Array adapter for the coffee product list view in the search tab.
+ */
 public class SearchResultAdapter extends ArrayAdapter<CoffeeProduct>
 {
-    private final List<CoffeeProduct> products;
     private final Context context;
     private final int resource;
 
     public SearchResultAdapter(Context context, int resource, List<CoffeeProduct> products)
     {
         super(context, resource, products);
-        this.products = products;
         this.context = context;
         this.resource = resource;
     }
@@ -37,12 +40,15 @@ public class SearchResultAdapter extends ArrayAdapter<CoffeeProduct>
         convertView = inflater.inflate(resource, parent, false);
 
         // gets all appropriate views for the list item
-        TextView title = (TextView) convertView.findViewById(R.id.sr_title);
-        TextView height = (TextView) convertView.findViewById(R.id.sr_height);
-        TextView country = (TextView) convertView.findViewById(R.id.sr_country);
-        TextView process = (TextView) convertView.findViewById(R.id.sr_process);
-        TextView match = (TextView) convertView.findViewById(R.id.sr_match);
+        TextView title      = convertView.findViewById(R.id.sr_title);
+        TextView height     = convertView.findViewById(R.id.sr_height);
+        TextView country    = convertView.findViewById(R.id.sr_country);
+        TextView process    = convertView.findViewById(R.id.sr_process);
+        TextView match      = convertView.findViewById(R.id.sr_match);
+        ImageView image     = convertView.findViewById(R.id.sr_image);
+        ImageButton liked   = convertView.findViewById(R.id.sr_liked_button);
 
+        // current position's coffee product
         CoffeeProduct product = getItem(position);
 
         // sets values for each view of the product in the current position
@@ -52,7 +58,16 @@ public class SearchResultAdapter extends ArrayAdapter<CoffeeProduct>
         process.setText(context.getString(R.string.sr_process, product.getProcess()));
         match.setText(context.getString(R.string.sr_match, 123)); // todo get match percentage from algorithm
 
-        // TODO set search result image as well
+        // todo set search result image as well
+        // image.setImage...
+
+        liked.setOnClickListener(view -> {
+            // todo link to liking functionality in backend
+        });
+
+        convertView.setOnClickListener(view -> {
+            // todo open detail view
+        });
 
         return convertView;
     }
