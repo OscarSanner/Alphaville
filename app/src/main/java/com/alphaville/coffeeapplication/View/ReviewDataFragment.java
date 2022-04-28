@@ -28,6 +28,7 @@ public class ReviewDataFragment extends Fragment {
     //TODO Try to implement databinding for MVVM
     //ReviewDataFragmentBinding binding;
     private TextView inputBox;
+    private RatingBar ratingBar;
     private Button textSaveButton;
     private ReviewDataViewModel viewModel;
 
@@ -52,7 +53,7 @@ public class ReviewDataFragment extends Fragment {
     }
 
    public void initRatingbar(View view){
-        final RatingBar ratingBar = (RatingBar) view.findViewById(R.id.ratingBar);
+        ratingBar = (RatingBar) view.findViewById(R.id.ratingBar);
    }
 
     /**
@@ -63,7 +64,7 @@ public class ReviewDataFragment extends Fragment {
         textSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                viewModel.createTextReview(inputBox.getText().toString());
+                viewModel.createTextandRatingReview(inputBox.getText().toString(), ratingBar.getRating());
             }
         });
     }
