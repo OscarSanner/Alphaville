@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,6 +50,10 @@ public class ReviewDataFragment extends Fragment {
         inputBox = view.findViewById(R.id.inputBox);
         inputBox.setHint("Enter your review");
     }
+
+   public void initRatingbar(View view){
+        final RatingBar ratingBar = (RatingBar) view.findViewById(R.id.ratingBar);
+   }
 
     /**
      * Initiates save button for text review
