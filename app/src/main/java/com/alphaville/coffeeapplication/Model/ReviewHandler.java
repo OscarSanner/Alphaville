@@ -25,6 +25,11 @@ public class ReviewHandler {
         Review newReview = new Review(text);
         reviews.add(newReview);
     }
+    public void createTextAndRatingReview(String text, double rating){
+        Review newReview = new Review(text, rating);
+        reviews.add(newReview);
+    }
+
 
     /**
      * Returns a copy of the list of reviews
