@@ -5,10 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +37,7 @@ public class ReviewDataFragment extends Fragment {
         viewModel = new ReviewDataViewModel();
 
         initInputBox(view);
+        initRatingbar(view);
         initSaveButton(view);
 
     return view;
@@ -53,7 +52,7 @@ public class ReviewDataFragment extends Fragment {
     }
 
    public void initRatingbar(View view){
-        ratingBar = (RatingBar) view.findViewById(R.id.ratingBar);
+        ratingBar = view.findViewById(R.id.ratingBar);
    }
 
     /**
@@ -64,7 +63,8 @@ public class ReviewDataFragment extends Fragment {
         textSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                viewModel.createTextandRatingReview(inputBox.getText().toString(), ratingBar.getRating());
+                System.out.println("pressed");
+                viewModel.createTextAndRatingReview(inputBox.getText().toString(), ratingBar.getRating());
             }
         });
     }
