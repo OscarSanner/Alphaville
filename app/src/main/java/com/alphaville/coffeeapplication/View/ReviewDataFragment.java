@@ -15,6 +15,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import com.alphaville.coffeeapplication.R;
+import com.alphaville.coffeeapplication.databinding.ReviewDataFragmentBinding;
 //import com.alphaville.coffeeapplication.databinding.ReviewDataFragmentBinding;
 
 import ViewModel.ReviewDataViewModel;
@@ -25,19 +26,20 @@ import ViewModel.ReviewDataViewModel;
 public class ReviewDataFragment extends Fragment {
 
     //TODO Try to implement databinding for MVVM
-    //ReviewDataFragmentBinding binding;
-    private TextView inputBox;
-    private Button textSaveButton;
+    private ReviewDataFragmentBinding binding;
+    //private TextView inputBox;
+    //private Button textSaveButton;
     private ReviewDataViewModel viewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.review_data_fragment, container, false);
+        binding = ReviewDataFragmentBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
 
         viewModel = new ReviewDataViewModel();
 
-        initInputBox(view);
-        initSaveButton(view);
+        initInputBox();
+        initSaveButton();
 
     return view;
     }
@@ -45,20 +47,18 @@ public class ReviewDataFragment extends Fragment {
     /**
      * Initiates the input box for inputting text review
      */
-    public void initInputBox(View view) {
-        inputBox = view.findViewById(R.id.inputBox);
-        inputBox.setHint("Enter your review");
+    public void initInputBox() {
+        binding.inputBox.setHint("Enter your review");
     }
 
     /**
      * Initiates save button for text review
      */
-    public void initSaveButton(View view) {
-        textSaveButton = view.findViewById(R.id.textSaveButton);
-        textSaveButton.setOnClickListener(new View.OnClickListener() {
+    public void initSaveButton() {
+        binding.textSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                viewModel.createTextReview(inputBox.getText().toString());
+                viewModel.createTextReview(binding.inputBox.getText().toString());
             }
         });
     }
