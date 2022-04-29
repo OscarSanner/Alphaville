@@ -17,6 +17,9 @@ import com.alphaville.coffeeapplication.databinding.CoffeeInfoViewFragmentBindin
 
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Class for handling a detailed view for a CoffeeProduct.
+ */
 public class CoffeeInfoViewFragment extends Fragment {
 
     private CoffeeInfoViewFragmentBinding binding;
@@ -33,7 +36,7 @@ public class CoffeeInfoViewFragment extends Fragment {
         setCoffeeAttributes(hight, flavour, country, region, process, rostery, brand);
         setCoffeeInformation(name, info, description);
         setCoffeePicture(image);
-        setClocks(firstClockText, secondClockText, thirdClockText);
+        setClockTexts(firstClockText, secondClockText, thirdClockText);
 
         //listener for the review button
         binding.reviewBtn.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +79,7 @@ public class CoffeeInfoViewFragment extends Fragment {
         binding.coffeepicture.setImageIcon(image);
     }
 
-    private void setClocks(String first, String second, String third){
+    private void setClockTexts(String first, String second, String third){
         binding.clock1Text.setText(first);
         binding.clock2Text.setText(second);
         binding.clock2Text.setText(third);

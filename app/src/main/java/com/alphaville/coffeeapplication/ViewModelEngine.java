@@ -7,6 +7,9 @@ import androidx.lifecycle.ViewModel;
  */
 public abstract class ViewModelEngine extends ViewModel {
 
+    /**
+     * Single instance of model
+     */
     private static final ModelFacade model = new ModelFacade();
 
     protected final ModelFacade getModel() {
