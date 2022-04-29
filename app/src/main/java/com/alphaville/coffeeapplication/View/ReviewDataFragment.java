@@ -40,7 +40,7 @@ public class ReviewDataFragment extends Fragment {
 
         viewModel = new ReviewDataViewModel();
 
-        initRatingbar(view);
+        //initRatingbar();
         initInputBox();
         initSaveButton();
 
@@ -54,9 +54,9 @@ public class ReviewDataFragment extends Fragment {
         binding.inputBox.setHint("Enter your review");
     }
 
-   public void initRatingbar(View view){
+   /* public void initRatingbar(View view){
         ratingBar = view.findViewById(R.id.ratingBar);
-   }
+   }*/
 
     /**
      * Initiates save button for text review
@@ -66,7 +66,8 @@ public class ReviewDataFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 System.out.println("pressed");
-                viewModel.createTextAndRatingReview(inputBox.getText().toString(), ratingBar.getRating());
+                viewModel.createTextAndRatingReview(binding.inputBox.getText().toString(),
+                        binding.ratingBar.getRating());
             }
         });
     }
