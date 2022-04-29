@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoffeeInfoViewFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="insideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="226dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#A5A3A3"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/coffeepicture"
+                        android:layout_width="118dp"
+                        android:layout_height="149dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#AE7D7D"
+                        app:layout_constraintStart_toStartOf="@+id/view2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <Button
+                        android:id="@+id/reviewBtn"
+                        android:layout_width="141dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Review"
+                        app:layout_constraintStart_toEndOf="@+id/coffeepicture"
+                        app:layout_constraintTop_toBottomOf="@+id/infoText" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/coffeepicture" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <TextView
+                        android:id="@+id/matchrateText"
+                        android:layout_width="68dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="4dp"
+                        android:text="82% Match"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/coffeenameText"
+                        app:layout_constraintTop_toBottomOf="@+id/coffeenameText" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@android:drawable/presence_away"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                    <TextView
+                        android:id="@+id/coffeenameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Skånerost Perú"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/coffeepicture"
+                        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+                    <ToggleButton
+                        android:id="@+id/likeBtn"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/toggle_heart"
+                        android:textOff=""
+                        android:textOn=""
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/infoText"
+                        android:layout_width="223dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Klassiskt rostad på vårat hederliga recept."
+                        app:layout_constraintStart_toEndOf="@+id/coffeepicture"
+                        app:layout_constraintTop_toBottomOf="@+id/matchrateText" />
+
+                    <TextView
+                        android:id="@+id/clock1Text"
+                        android:layout_width="40dp"
+                        android:layout_height="14dp"
+                        android:text="Sweetness"
+                        android:textSize="8dp"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                        app:layout_constraintStart_toStartOf="@+id/imageView5" />
+
+                    <TextView
+                        android:id="@+id/clock2Text"
+                        android:layout_width="40dp"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:text="Fullness"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                        app:layout_constraintStart_toStartOf="@+id/imageView6" />
+
+                    <TextView
+                        android:id="@+id/clock3Text"
+                        android:layout_width="40dp"
+                        android:layout_height="14dp"
+                        android:gravity="center"
+                        android:text="Bitter"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="193dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#C3E8B8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/hardcoded5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="200dp"
+                        android:text="•Process:"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/hardcoded1" />
+
+                    <TextView
+                        android:id="@+id/hardcoded1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:text="•Hight:"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/hardcoded2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="•Flavour:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded1"
+                        app:layout_constraintTop_toBottomOf="@+id/hardcoded1" />
+
+                    <TextView
+                        android:id="@+id/hardcoded3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="•Country:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded2"
+                        app:layout_constraintTop_toBottomOf="@+id/hardcoded2" />
+
+                    <TextView
+                        android:id="@+id/hardcoded4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="•Region:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded3"
+                        app:layout_constraintTop_toBottomOf="@+id/hardcoded3" />
+
+                    <TextView
+                        android:id="@+id/hardcoded6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="•Rostery:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded5"
+                        app:layout_constraintTop_toTopOf="@+id/hardcoded2" />
+
+                    <TextView
+                        android:id="@+id/hardcoded7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="•Brand:"
+                        app:layout_constraintStart_toStartOf="@+id/hardcoded6"
+                        app:layout_constraintTop_toTopOf="@+id/hardcoded3" />
+
+                    <TextView
+                        android:id="@+id/hightText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded1"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded1" />
+
+                    <TextView
+                        android:id="@+id/processText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded5"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded5" />
+
+                    <TextView
+                        android:id="@+id/flavourText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded2"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded2" />
+
+                    <TextView
+                        android:id="@+id/countryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded3"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded3" />
+
+                    <TextView
+                        android:id="@+id/regionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded4"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded4" />
+
+                    <TextView
+                        android:id="@+id/rosteryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded6"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded6" />
+
+                    <TextView
+                        android:id="@+id/brandText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="@+id/hardcoded7"
+                        app:layout_constraintStart_toEndOf="@+id/hardcoded7" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="246dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="262dp"
+                        android:background="#E5E8C4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/descriptionText"
+                        android:layout_width="370dp"
+                        android:layout_height="213dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                        app:layout_constraintEnd_toEndOf="@+id/view3"
+                        app:layout_constraintHorizontal_bias="0.39"
+                        app:layout_constraintStart_toStartOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="332dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/mapView"
+                        android:layout_width="411dp"
+                        android:layout_height="330dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="128dp"
+                        android:text="Openstreetmap is displayed here"
+                        app:layout_constraintStart_toStartOf="@+id/mapView"
+                        app:layout_constraintTop_toTopOf="@+id/mapView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
