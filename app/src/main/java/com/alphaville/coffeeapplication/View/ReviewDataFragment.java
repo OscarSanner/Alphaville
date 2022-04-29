@@ -27,10 +27,6 @@ public class ReviewDataFragment extends Fragment {
 
     //TODO Try to implement databinding for MVVM
     private ReviewDataFragmentBinding binding;
-    //private TextView inputBox;
-    //private Button textSaveButton;
-    //ReviewDataFragmentBinding binding;
-    private RatingBar ratingBar;
     private ReviewDataViewModel viewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
