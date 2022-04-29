@@ -10,11 +10,18 @@ public class Review {
      * Free form text review of coffeeProduct
      */
     private String textReview;
+    private double rating;
     //TODO Add more attributes
+
 
 
     public Review(String textReview) {
         this.textReview = textReview;
+    }
+
+    public Review(String textReview, double rating){
+        this.textReview = textReview;
+        this.rating = rating;
     }
 
     public String getTextReview() {
