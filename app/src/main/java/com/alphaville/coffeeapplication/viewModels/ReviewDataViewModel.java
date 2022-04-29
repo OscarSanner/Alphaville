@@ -1,4 +1,4 @@
-package ViewModel;
+package com.alphaville.coffeeapplication.viewModels;
 
 import androidx.lifecycle.ViewModel;
 
@@ -11,9 +11,8 @@ import com.alphaville.coffeeapplication.Model.ReviewHandler;
  */
 public class ReviewDataViewModel extends ViewModel {
 
-    //TODO Initialize review handler in main activity or implement separate viewmodel
-    // that gives access to model (see ModelEngineViewModel in Deptify project
-    // (https://github.com/OlofSjogren/GoAyo/blob/master/app/src/main/java/com/goayo/debtify/viewmodel/ModelEngineViewModel.java))
+    // Initialize review handler in main activity or implement separate viewmodel
+    // that gives access to model
     ReviewHandler reviewHandler = new ReviewHandler();
 
     public void createTextReview(String reviewText) {

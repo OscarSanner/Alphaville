@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.alphaville.coffeeapplication.databinding.ReviewDataFragmentBinding;
 
-import ViewModel.ReviewDataViewModel;
+import com.alphaville.coffeeapplication.viewModels.ReviewDataViewModel;
 
 /**
  * ReviewDataFragment is the fragment for inputting and saving a text review

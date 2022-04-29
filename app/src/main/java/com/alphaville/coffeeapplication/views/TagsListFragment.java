@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 import com.alphaville.coffeeapplication.R;
 
-import ViewModel.ReviewDataViewModel;
+import com.alphaville.coffeeapplication.viewModels.ReviewDataViewModel;
 
 public class TagsListFragment extends Fragment {
 
