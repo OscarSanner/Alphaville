@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CoffeeApplication</string>
+    <string name="sr_height">Höjd: %1$d</string>
+    <string name="sr_country">Land: %1$s</string>
+    <string name="sr_process">Process: %1$s</string>
+    <string name="sr_match">%1$d%% match</string>
 </resources>
