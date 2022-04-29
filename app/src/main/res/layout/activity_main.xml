@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
 
+
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
@@ -21,16 +22,6 @@
         app:menu="@menu/bottom_navigation"
         android:background="?android:attr/windowBackground"/>
 
-
-    <!--TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" /-->
-
   <!--Hardcoded fragment for demo purpose. Remove later-->
     <fragment
         android:id="@+id/coffee_info_view_fragment.xml"
@@ -41,5 +32,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </RelativeLayout>
