@@ -1,6 +1,7 @@
 package com.alphaville.coffeeapplication;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +19,14 @@ import java.util.List;
  */
 public class SearchResultAdapter extends ArrayAdapter<CoffeeProduct>
 {
-    private final Context context;
     private final int resource;
+    private final Context context;
 
     public SearchResultAdapter(Context context, int resource, List<CoffeeProduct> products)
     {
         super(context, resource, products);
-        this.context = context;
         this.resource = resource;
+        this.context = context;
     }
 
     @Override
@@ -55,11 +56,34 @@ public class SearchResultAdapter extends ArrayAdapter<CoffeeProduct>
         title.setText(product.getName());
         height.setText(context.getString(R.string.sr_height, product.getElevation()));
         country.setText(context.getString(R.string.sr_country, product.getCountry()));
-        process.setText(context.getString(R.string.sr_process, product.getProcess()));
         match.setText(context.getString(R.string.sr_match, 123)); // todo get match percentage from algorithm
 
+        String processString;
+        switch(product.getProcess()){
+            case dry:
+                processString = "Soltorkad";
+                break;
+            case wet:
+                processString = "Blötlagd";
+                break;
+            case fermented:
+                processString = "Fermenterad";
+                break;
+            case honey:
+                processString = "Honey";
+                break;
+            default:
+                processString = "Okänt";
+                break;
+        }
+
+        process.setText(context.getString(R.string.sr_process, processString));
+
+
         // todo set search result image as well
-        // image.setImage...
+        // image.setImage
+
+        liked.setImageResource(product.isLiked() ? R.drawable.filled_heart : R.drawable.empty_heart);
 
         liked.setOnClickListener(view -> {
             // todo link to liking functionality in backend
