@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
@@ -23,9 +21,10 @@
         android:background="?android:attr/windowBackground"/>
 
   <!--Hardcoded fragment for demo purpose. Remove later-->
+
     <fragment
         android:id="@+id/coffee_info_view_fragment.xml"
-        android:name="com.alphaville.coffeeapplication.CoffeeInfoViewFragment"
+        android:name="com.alphaville.coffeeapplication.views.CoffeeInfoViewFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

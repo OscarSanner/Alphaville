@@ -7,7 +7,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.alphaville.coffeeapplication.View.ReviewDataFragment"
+        android:name="com.alphaville.coffeeapplication.views.ReviewDataFragment"
         android:layout_width="match_parent"
         android:layout_height="257dp"
         android:layout_marginTop="36dp"
@@ -18,7 +18,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerViewTags"
-        android:name="com.alphaville.coffeeapplication.View.TagsListFragment"
+        android:name="com.alphaville.coffeeapplication.views.TagsListFragment"
         android:layout_width="295dp"
         android:layout_height="160dp"
         app:layout_constraintBottom_toBottomOf="parent"

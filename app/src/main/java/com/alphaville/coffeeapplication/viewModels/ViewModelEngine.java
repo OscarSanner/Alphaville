@@ -1,6 +1,8 @@
-package com.alphaville.coffeeapplication;
+package com.alphaville.coffeeapplication.viewModels;
 
 import androidx.lifecycle.ViewModel;
+
+import com.alphaville.coffeeapplication.model.ModelFacade;
 
 /**
  * Abstract ViewModel-class that generates a single instance of the model for all its subclasses.

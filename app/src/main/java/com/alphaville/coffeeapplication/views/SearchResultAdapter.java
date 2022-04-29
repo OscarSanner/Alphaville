@@ -1,7 +1,6 @@
-package com.alphaville.coffeeapplication;
+package com.alphaville.coffeeapplication.views;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alphaville.coffeeapplication.R;
 import com.alphaville.coffeeapplication.model.CoffeeProduct;
 
 import java.util.List;

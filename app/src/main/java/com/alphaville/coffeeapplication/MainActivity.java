@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.alphaville.coffeeapplication.views.HistoryFragment;
+import com.alphaville.coffeeapplication.views.RecommendationsFragment;
+import com.alphaville.coffeeapplication.views.SearchFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {

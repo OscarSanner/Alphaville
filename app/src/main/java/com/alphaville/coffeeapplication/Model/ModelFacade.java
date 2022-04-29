@@ -1,4 +1,4 @@
-package com.alphaville.coffeeapplication;
+package com.alphaville.coffeeapplication.model;
 
 /**
  * A facade-class for the applications model. It is used by the ViewModels to handle the model.

@@ -1,6 +1,4 @@
-package com.alphaville.coffeeapplication;
-
-import androidx.lifecycle.ViewModel;
+package com.alphaville.coffeeapplication.viewModels;
 
 public class CoffeeInfoViewModel extends ViewModelEngine {
 
