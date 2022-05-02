@@ -27,7 +27,6 @@ import java.util.ArrayList;
  */
 public class ReviewDataFragment extends Fragment {
 
-    //TODO Try to implement databinding for MVVM
     private ReviewDataFragmentBinding binding;
     private ReviewDataViewModel viewModel;
 
