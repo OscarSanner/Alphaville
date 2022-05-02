@@ -3,6 +3,7 @@ package com.alphaville.coffeeapplication;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import com.alphaville.coffeeapplication.model.CoffeeProduct;
 
 import java.util.List;
 
@@ -12,9 +13,9 @@ public class SearchListViewModel extends ViewModel {
 
     // Gör senare om till en lista av kaffeproduktobjekt, denna lista ska sorteras baseras
     // på sök / filter
-    private final MutableLiveData<List<Object>> filteredList = new MutableLiveData<List<Object>>();
+    private final MutableLiveData<List<CoffeeProduct>> filteredList = new MutableLiveData<List<CoffeeProduct>>();
 
-    public LiveData<List<Object>> getFilteredList() {
+    public LiveData<List<CoffeeProduct>> getFilteredList() {
         return filteredList;
     }
     // Fixa via modellen att filteredList uppdateras baserat på filter & sök

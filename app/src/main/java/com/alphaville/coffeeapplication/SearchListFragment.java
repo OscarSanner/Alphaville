@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.alphaville.coffeeapplication.model.CoffeeProduct;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class SearchListFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private RecyclerView rv;
     private CoffeeProductAdapter adapter;
-    List<Object> coffeProducts = new ArrayList<>();
+    List<CoffeeProduct> coffeProducts = new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,9 +39,9 @@ public class SearchListFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         SearchListViewModel model = new ViewModelProvider(requireActivity()).get(SearchListViewModel.class);
-        final Observer<List<Object>> nameObserver = new Observer<List<Object>>() {
+        final Observer<List<CoffeeProduct>> nameObserver = new Observer<List<CoffeeProduct>>() {
             @Override
-            public void onChanged(@Nullable final List<Object> t) {
+            public void onChanged(@Nullable final List<CoffeeProduct> t) {
                 coffeProducts = t;
                 // kanske måste notifya adapter / rv, men osäker borde gå utan
             }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.alphaville.coffeeapplication.model.CoffeeProduct;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,10 +16,10 @@ public class CoffeeProductAdapter extends RecyclerView.Adapter<CoffeeProductAdap
 
     // Instansvariabler + konstruktor
     // Byt ut mot kaffekort senare
-    private List<Object> coffeeProducts;
+    private List<CoffeeProduct> coffeeProducts;
 
     // Pass in the contact array into the constructor
-    public CoffeeProductAdapter(List<Object> coffeeProducts) {
+    public CoffeeProductAdapter(List<CoffeeProduct> coffeeProducts) {
         this.coffeeProducts = coffeeProducts;
     }
 
@@ -39,7 +40,7 @@ public class CoffeeProductAdapter extends RecyclerView.Adapter<CoffeeProductAdap
     @Override
     public void onBindViewHolder(@NonNull CoffeeProductAdapter.ViewHolder holder, int position) {
         // Get the data model based on position
-        Object product = coffeeProducts.get(position);
+        CoffeeProduct product = coffeeProducts.get(position);
 
         // Set item views based on your views and data model
 
